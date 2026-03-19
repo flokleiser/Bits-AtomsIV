@@ -11,7 +11,7 @@ struct Course: Identifiable {
     let recorded: Bool
     let instructor: String
     let maxStudents: Int
-    let id: Int
+    let id: UUID = UUID()
 
     init(
         name: String,
@@ -23,7 +23,6 @@ struct Course: Identifiable {
         recorded: Bool,
         instructor: String,
         maxStudents: Int,
-        id: Int
     ) {
         self.name = name
         self.description = description
@@ -34,7 +33,6 @@ struct Course: Identifiable {
         self.recorded = recorded
         self.instructor = instructor
         self.maxStudents = maxStudents
-        self.id = id
     }
 }
 
@@ -49,7 +47,6 @@ let courses = [
         recorded: false,
         instructor: "Paulina Zybinska",
         maxStudents: 20,
-        id: 1
     ),
     Course(
         name: "Mobile User Interface",
@@ -61,7 +58,6 @@ let courses = [
         recorded: false,
         instructor: "Jürgen Späth",
         maxStudents: 20,
-        id: 2
     ),
     Course(
         name: "Creative Coding",
@@ -73,7 +69,6 @@ let courses = [
         recorded: true,
         instructor: "Luke Franzke",
         maxStudents: 20,
-        id: 3
     ),
     Course(
         name: "Test Course",
@@ -85,7 +80,6 @@ let courses = [
         recorded: false,
         instructor: "Max Muster",
         maxStudents: 2,
-        id: 4
     ),
     Course(
         name: "Test Course 2",
@@ -97,7 +91,6 @@ let courses = [
         recorded: true,
         instructor: "Max Mustermann",
         maxStudents: 4,
-        id: 5
         
     ),
 ]
